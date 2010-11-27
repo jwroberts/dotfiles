@@ -1,3 +1,4 @@
 alias grep='grep --color'
 alias vi='vim'
 export pager='most'
+export EDITOR='vim'
