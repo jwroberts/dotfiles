@@ -1,15 +1,23 @@
+syntax enable
 set autoindent
+set smartindent
+
 set shiftwidth=4
 set tabstop=4
 
 set tags=./tags;/
 
 set expandtab
-set smartindent
+set smarttab
 
 set incsearch
-set nocompatible
 set smartcase
 
+" show matching scope bracket
+set showmatch
+ 
+set nocompatible
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
-syntax enable
+
+" fix clang_complete vim warnings
+let g:clang_user_options='|| exit 0'
