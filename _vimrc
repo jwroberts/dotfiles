@@ -32,6 +32,7 @@ set noswapfile
 
 " bashrc should have TERM='xterm-256color'
 let g:solarized_termcolors=256
+set t_Co=256
 set background=dark
 colorscheme solarized
 let g:airline#extensions#tabline#enabled = 1
