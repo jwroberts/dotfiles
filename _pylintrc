@@ -1,6 +1,7 @@
 [REPORTS]
 # Disable obnoxious reports
 reports=no
+msg-template={path}:{line}: {msg_id} {symbol}, {obj} {msg}
 
 [TYPECHECK]
 # List of module names for which member attributes should not be checked
