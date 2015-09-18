@@ -2,12 +2,6 @@ export TERM='xterm-256color'
 export EDITOR=vim
 export HISTIGNORE='&:ls:cd:exit:clear:history'
 export PAGER=less
-
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-
-set -o vi
-
-
 shopt -s cmdhist  # all history in same file
 shopt -s cdspell  # minor mistakes in cd spelling
+set -o vi
