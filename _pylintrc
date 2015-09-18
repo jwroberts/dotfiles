@@ -1,0 +1,82 @@
+[REPORTS]
+# Disable obnoxious reports
+reports=no
+
+[TYPECHECK]
+# List of module names for which member attributes should not be checked
+# (useful for modules/projects where namespaces are manipulated during runtime
+# and thus existing member attributes cannot be deduced by static analysis
+ignored-modules=
+
+# List of classes names for which member attributes should not be checked
+# (useful for classes with attributes dynamically set).
+ignored-classes=SQLObject, EasyDict
+
+# List of members which are set dynamically and missed by pylint inference
+# system, and so shouldn't trigger E0201 when accessed. Python regular
+# expressions are accepted.
+generated-members=REQUEST,acl_users,aq_parent
+
+
+[BASIC]
+# List of builtins function names that should not be used, separated by a comma
+bad-functions=input,file
+# Good variable names which should always be accepted, separated by a comma
+good-names=i,j,k,n,s,ex,Run,_
+# Bad variable names which should always be refused, separated by a comma
+bad-names=foo,bar,baz
+# Include a hint for the correct naming format with invalid-name
+include-naming-hint=yes
+# Regular expression matching correct function names
+function-rgx=[a-z_][a-z0-9_]{2,30}$
+# Naming hint for function names
+function-name-hint=[a-z_][a-z0-9_]{2,30}$
+# Regular expression matching correct variable names
+variable-rgx=[a-z_][a-z0-9_]{2,30}$
+# Naming hint for variable names
+variable-name-hint=[a-z_][a-z0-9_]{2,30}$
+# Regular expression which should only match function or class names that do
+# not require a docstring.
+no-docstring-rgx=__.*__
+# Minimum line length for functions/classes that require docstrings, shorter
+# ones are exempt.
+docstring-min-length=-1
+
+
+[FORMAT]
+# Maximum number of characters on a single line.
+max-line-length=80
+# Regexp for a line that is allowed to be longer than the limit.
+ignore-long-lines=^\s*(# )?<?https?://\S+>?$
+# Maximum number of lines in a module
+max-module-lines=2000
+
+
+[DESIGN]
+# Maximum number of arguments for function / method
+max-args=5
+# Argument names that match this expression will be ignored. Default to name
+# with leading underscore
+ignored-argument-names=_.*
+# Maximum number of locals for function / method body
+max-locals=15
+# Maximum number of return / yield for function / method body
+max-returns=6
+# Maximum number of branch for function / method body
+max-branches=20
+# Maximum number of statements in function / method body
+max-statements=100
+# Maximum number of parents for a class (see R0901).
+max-parents=7
+# Maximum number of attributes for a class (see R0902).
+max-attributes=15
+# Minimum number of public methods for a class (see R0903).
+min-public-methods=1
+# Maximum number of public methods for a class (see R0904).
+max-public-methods=30
+
+
+[EXCEPTIONS]
+# Exceptions that will emit a warning when being caught. Defaults to
+# "Exception"
+overgeneral-exceptions=
